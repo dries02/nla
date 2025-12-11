@@ -1,0 +1,33 @@
+[project]
+name = "hw1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "numpy>=2.3.5",
+    "scipy>=1.16.3",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "CPY001",         # missing copyright
+    "T201",           # using print
+    "TD002",          # missing author in TODO
+    "TD003",          # missing issue link for TODO
+    "S311",           # use of random for cryptography
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
